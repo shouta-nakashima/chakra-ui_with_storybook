@@ -61,3 +61,37 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ```
 
 `npx husky add .husky/pre-commit "hook"`
+
+### stylelint
+
+`npm install -D stylelint stylelint-scss stylelint-config-recommended-scss prettier stylelint-config-prettier stylelint-prettier`
+
+`npm install sass`
+
+```.stylelintrc
+//.stylelintrc
+{
+  "plugin": [
+    "stylelint-scss"
+  ],
+  "extends": [
+    "stylelint-config-recommended-scss",
+    "stylelint-prettier/recommended"
+  ],
+  "ignoreFiles": [
+    "**/node_modules/**"
+  ],
+  "rules": {
+    "at-rule-no-unknown": [true, {
+      "ignoreAtRules": ["function", "if", "else", "for", "each", "include", "mixin", "content"]
+    }]
+  }
+}
+```
+
+```
+"scripts": {
+    "lint": "stylelint \"src/**/*.scss\"",
+    "format": "stylelint --fix \"src/**/*.scss\""
+  },
+```
