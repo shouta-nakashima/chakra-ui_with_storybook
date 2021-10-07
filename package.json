@@ -49,7 +49,7 @@
       "prettier --write"
     ],
     "src/**/*.{css,less,sass,scss}": [
-      "stylelint --fix \"src/**/*.scss\""
+      "stylelint --fix"
     ]
   }
 }
