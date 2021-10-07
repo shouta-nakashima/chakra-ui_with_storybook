@@ -95,3 +95,24 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
     "format": "stylelint --fix \"src/**/*.scss\""
   },
 ```
+
+### install and setup Chakra UI
+
+`@chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^4`
+
+```_app.tsx
+//_app.tsx
+
+import { AppProps } from 'next/app';
+import { ChakraProvider } from '@chakra-ui/react';
+
+const MyApp = ({ Component, pageProps }: AppProps) =>  {
+  return (
+    <ChakraProvider>
+      <Component {...pageProps} />
+    </ChakraProvider>
+  );
+}
+
+export default MyApp;
+```
