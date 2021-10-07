@@ -5,3 +5,34 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ### install NextJS with typescript
 
 `npx create-next-app {your project name} --typescript`
+
+### install prettier and setting eslint
+
+`npm install -D prettier eslint-config-prettier`
+
+```eslintrc.json
+//.eslintrc.json
+{
+  "extends": ["next", "next/core-web-vitals", "prettier"]
+}
+```
+
+```//package.json
+// package.json
+  "prettier": {
+    "trailingComma": "all",
+    "tabWidth": 2, 
+    "semi": false,
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "printWidth": 100 
+  },
+```
+
+``` package.json
+  "scripts": {
+    "lint": "next lint --dir src",
+    "lint:fix": "eslint src --ext .js,jsx,.ts,.tsx --fix",
+    "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css}'"
+  },
+```
