@@ -36,6 +36,9 @@
     "printWidth": 100
   },
   "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint src --ext .js,jsx,.ts,.tsx --fix"
+    ],
     "./**/*.{js,jsx,ts,tsx,json,css}": [
       "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css}'"
     ]
