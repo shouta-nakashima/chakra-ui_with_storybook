@@ -36,3 +36,28 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css}'"
   },
 ```
+
+### install husky and setup
+
+`npm install -D husky lint-staged`
+
+```
+//package.json
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+```
+
+#### huskyの有効化
+`npx husky install`
+
+```package.json
+  "scripts": {
+    "prepare": "husky install"
+  },
+```
+
+`npx husky add .husky/pre-commit "hook"`
