@@ -13,7 +13,7 @@
     "all-format": "lint-staged",
     "lint-style": "stylelint \"src/**/*.scss\"",
     "format-style": "stylelint --fix \"src/**/*.scss\"",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
@@ -41,6 +41,7 @@
     "husky": "^7.0.2",
     "lint-staged": "^11.2.0",
     "prettier": "^2.4.1",
+    "storybook-addon-next-router": "^3.0.8",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-recommended-scss": "^4.3.0",
