@@ -1,4 +1,5 @@
 import { VFC } from 'react'
+import Link from 'next/link'
 import { Menu, MenuButton, MenuList, MenuItem, Button } from '@chakra-ui/react'
 import { ChevronDownIcon } from '@chakra-ui/icons'
 
@@ -18,7 +19,9 @@ const ButtonMenu: VFC<Props> = (props) => {
         {contents &&
           contents.map((content) => (
             <MenuItem m={0} key={content.menu}>
-              {content.menu}
+              <Link href={content.path}>
+                <a>{content.menu}</a>
+              </Link>
             </MenuItem>
           ))}
       </MenuList>
